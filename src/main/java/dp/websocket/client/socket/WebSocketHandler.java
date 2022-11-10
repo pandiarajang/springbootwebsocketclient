@@ -39,7 +39,7 @@ public class WebSocketHandler extends TextWebSocketHandler {
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
         super.afterConnectionClosed(session, status);
-        if (status.getCode() == 1006 || status.getCode() == 1011 || status.getCode() == 1012) {
+        if (status.getCode() == 1006 || status.getCode() == 1011 || status.getCode() == 1012 ||  status.getCode() == 1001 ) {
             connector.reconnect();
         }
     }
